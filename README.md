@@ -1,0 +1,2 @@
+# Local_Seed_Plant_Swap_Community_Platform
+Automated website repository for Local_Seed_Plant_Swap_Community_Platform
