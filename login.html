@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1d4d3b">
+<meta name="description" content="160 — Local Seed & Plant Swap Community Platform. Discover, swap and grow with nearby gardeners.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23246b4a'/%3E%3Cstop offset='100%25' stop-color='%23c58a45'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url(%23g)'/%3E%3Cpath d='M16 27V12M16 16C11 10 6 12 5 13c1 6 4 9 11 8M16 20c4-6 9-7 11-6-1 6-4 9-11 9' fill='none' stroke='%23ffffff' stroke-width='2.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='16' cy='9' r='2.2' fill='%23ffffff'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23246b4a'/%3E%3Cstop offset='100%25' stop-color='%23c58a45'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url(%23g)'/%3E%3Cpath d='M16 27V12M16 16C11 10 6 12 5 13c1 6 4 9 11 8M16 20c4-6 9-7 11-6-1 6-4 9-11 9' fill='none' stroke='%23ffffff' stroke-width='2.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='16' cy='9' r='2.2' fill='%23ffffff'/%3E%3C/svg%3E">
+<title>160 — Local Seed & Plant Swap Community</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-mode">
+<header class="topbar">
+<nav class="nav container">
+<a class="brand" href="#" onclick="go('home1');return false" aria-label="SeedCircle Home"><span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 27V12M16 16C11 10 6 12 5 13c1 6 4 9 11 8M16 20c4-6 9-7 11-6-1 6-4 9-11 9" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="9" r="2.2" fill="currentColor"/></svg></span><span><span class="brand-name">SeedCircle</span><span class="brand-sub">Seed & Plant Swap</span></span></a>
+<div class="navlinks">
+<button data-page="home1" onclick="go('home1')">Home</button>
+<button data-page="home2" onclick="go('home2')">Home 2</button>
+<button data-page="how" onclick="go('how')">How It Works</button>
+<button data-page="browse" onclick="go('browse')">Browse Swaps</button>
+<button data-page="service" onclick="go('service')">Services</button>
+<button data-page="events" onclick="go('events')">Local Events</button>
+<button data-page="contact" onclick="go('contact')">Contact</button>
+<button data-page="dashboard" onclick="go('dashboard')">Dashboard</button>
+</div>
+<div class="nav-actions">
+<button class="icon-btn" aria-label="Toggle RTL" onclick="toggleRTL()">↔</button>
+<button class="icon-btn" aria-label="Toggle theme" onclick="toggleTheme()">☼</button>
+<button class="contact-btn" onclick="go('login')">Login</button>
+<button class="icon-btn hamb" aria-label="Menu" onclick="toggleMenu()">☰</button>
+</div>
+</nav>
+<div class="mobile-panel" id="mobilePanel">
+<div class="mobile-links">
+<button onclick="go('home1')">Home</button>
+<button onclick="go('home2')">Home 2</button>
+<button onclick="go('how')">How It Works</button>
+<button onclick="go('browse')">Browse Swaps</button>
+<button onclick="go('service')">Services</button>
+<button onclick="go('events')">Local Events</button>
+<button onclick="go('contact')">Contact</button>
+<button onclick="go('dashboard')">Dashboard</button>
+</div>
+<div class="mobile-actions-row">
+<button class="icon-btn" aria-label="Toggle RTL" onclick="toggleRTL()">↔</button>
+<button class="icon-btn" aria-label="Toggle theme" onclick="toggleTheme()">☼</button>
+</div>
+<button class="contact-btn" onclick="go('login')">Login</button>
+</div>
+</header>
+<main>
+<section id="login" class="page active">
+<div class="container auth-page">
+
+<div class="auth-top-actions" style="position: absolute; top: 24px; right: 24px; display: flex; gap: 12px; z-index: 100;">
+    <button class="icon-btn" aria-label="Toggle RTL" onclick="toggleRTL()" style="background: var(--surface); border: 1px solid var(--line); color: var(--ink); border-radius: 50%; width: 44px; height: 44px; display: grid; place-items: center; cursor: pointer; transition: 0.2s;">↔</button>
+    <button class="icon-btn" aria-label="Toggle theme" onclick="toggleTheme()" style="background: var(--surface); border: 1px solid var(--line); color: var(--ink); border-radius: 50%; width: 44px; height: 44px; display: grid; place-items: center; cursor: pointer; transition: 0.2s;">☼</button>
+</div>
+
+<div class="auth-wrap">
+<div class="login-card auth-card" id="signinCard">
+<div class="auth-logo">
+<a class="brand" href="#" onclick="go('home1');return false" aria-label="SeedCircle Home"><span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 27V12M16 16C11 10 6 12 5 13c1 6 4 9 11 8M16 20c4-6 9-7 11-6-1 6-4 9-11 9" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="9" r="2.2" fill="currentColor"/></svg></span><span><span class="brand-name">SeedCircle</span><span class="brand-sub">Seed & Plant Swap</span></span></a>
+</div>
+
+<div class="auth-title"><span class="eyebrow">Member portal</span><h1>Welcome back</h1><p style="color:var(--muted)">Sign in to manage your garden exchange.</p></div>
+
+<div class="form-grid">
+<div class="form-group full"><label>Email</label><input class="field" type="email" placeholder="you@example.com"></div>
+<div class="form-group full"><label>Password</label><input class="field" type="password" placeholder="••••••••"></div>
+</div>
+<div class="auth-options"><label class="remember"><input type="checkbox"> Remember me</label><button class="forgot-link" type="button" onclick="toast('Password reset link preview')">Forgot password?</button></div>
+<button class="primary-btn" style="width:100%;margin-top:17px" onclick="go('dashboard')">Sign In</button>
+<div style="margin: 20px 0 12px; color: var(--ink); font-size: 0.95rem; text-align: center;">or continue with</div>
+<div class="social-row">
+<button class="social-btn" type="button" onclick="toast('Google sign-in demo — connect Google Identity Services')" aria-label="Continue with Google"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M21.35 12.27c0-.72-.06-1.42-.18-2.09H12v3.95h5.24a4.48 4.48 0 0 1-1.94 2.94v2.45h3.14c1.84-1.69 2.91-4.18 2.91-7.25Z"/><path fill="#34A853" d="M12 21.86c2.63 0 4.84-.87 6.45-2.34l-3.14-2.45c-.87.58-1.98.92-3.31.92-2.54 0-4.69-1.72-5.46-4.03H3.3v2.53A9.75 9.75 0 0 0 12 21.86Z"/><path fill="#FBBC05" d="M6.54 13.96A5.86 5.86 0 0 1 6.23 12c0-.68.12-1.34.31-1.96V7.51H3.3A9.75 9.75 0 0 0 2.25 12c0 1.57.38 3.05 1.05 4.49l3.24-2.53Z"/><path fill="#EA4335" d="M12 6.01c1.43 0 2.71.49 3.72 1.46l2.79-2.79C16.84 3.04 14.63 2.14 12 2.14a9.75 9.75 0 0 0-8.7 5.37l3.24 2.53C7.31 7.73 9.46 6.01 12 6.01Z"/></svg>Google</button>
+<button class="social-btn" type="button" onclick="toast('Apple sign-in demo — connect Sign in with Apple')" aria-label="Continue with Apple"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.07-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.38 1.8-3.13 1.87-2.39 5.98.48 7.13-.57 1.5-1.31 2.99-2.51 4.09ZM12.03 7.25C11.88 5.02 13.69 3.18 15.77 3c.29 2.58-2.33 4.5-3.74 4.25Z"/></svg>Apple</button>
+</div>
+<div class="auth-switch">New to SeedCircle? <button type="button" onclick="showRegister()">Create an account</button></div>
+</div>
+<div class="login-card auth-card" id="registerCard" style="display:none">
+<div class="auth-logo">
+<a class="brand" href="#" onclick="go('home1');return false" aria-label="SeedCircle Home"><span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 27V12M16 16C11 10 6 12 5 13c1 6 4 9 11 8M16 20c4-6 9-7 11-6-1 6-4 9-11 9" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="9" r="2.2" fill="currentColor"/></svg></span><span><span class="brand-name">SeedCircle</span><span class="brand-sub">Seed & Plant Swap</span></span></a>
+</div>
+
+<div class="auth-title"><span class="eyebrow">Join the community</span><h1>Create account</h1><p style="color:var(--muted)">Start swapping seeds, plants and cuttings locally.</p></div>
+
+<div class="form-grid">
+<div class="form-group full"><label>First name</label><input class="field" placeholder="First name"></div>
+<div class="form-group full"><label>Last name</label><input class="field" placeholder="Last name"></div>
+<div class="form-group full"><label>Email</label><input class="field" type="email" placeholder="you@example.com"></div>
+<div class="form-group full"><label>Password</label><input class="field" type="password" placeholder="Create a password"></div>
+</div>
+<label class="terms"><input type="checkbox" required><span>I agree to the <a href="#" onclick="toast('Terms & Conditions preview');return false" style="color:var(--primary);font-weight:900">Terms & Conditions</a> and <a href="#" onclick="toast('Privacy Policy preview');return false" style="color:var(--primary);font-weight:900">Privacy Policy</a>.</span></label>
+<button class="primary-btn" style="width:100%;margin-top:15px" onclick="toast('Account created — demo confirmation');showLogin()">Create Account</button>
+<div style="margin: 20px 0 12px; color: var(--ink); font-size: 0.95rem; text-align: center;">or register with</div>
+<div class="social-row">
+<button class="social-btn" type="button" onclick="toast('Google sign-up demo — connect Google Identity Services')" aria-label="Sign up with Google"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M21.35 12.27c0-.72-.06-1.42-.18-2.09H12v3.95h5.24a4.48 4.48 0 0 1-1.94 2.94v2.45h3.14c1.84-1.69 2.91-4.18 2.91-7.25Z"/><path fill="#34A853" d="M12 21.86c2.63 0 4.84-.87 6.45-2.34l-3.14-2.45c-.87.58-1.98.92-3.31.92-2.54 0-4.69-1.72-5.46-4.03H3.3v2.53A9.75 9.75 0 0 0 12 21.86Z"/><path fill="#FBBC05" d="M6.54 13.96A5.86 5.86 0 0 1 6.23 12c0-.68.12-1.34.31-1.96V7.51H3.3A9.75 9.75 0 0 0 2.25 12c0 1.57.38 3.05 1.05 4.49l3.24-2.53Z"/><path fill="#EA4335" d="M12 6.01c1.43 0 2.71.49 3.72 1.46l2.79-2.79C16.84 3.04 14.63 2.14 12 2.14a9.75 9.75 0 0 0-8.7 5.37l3.24 2.53C7.31 7.73 9.46 6.01 12 6.01Z"/></svg>Google</button>
+<button class="social-btn" type="button" onclick="toast('Apple sign-up demo — connect Sign in with Apple')" aria-label="Sign up with Apple"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.07-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.38 1.8-3.13 1.87-2.39 5.98.48 7.13-.57 1.5-1.31 2.99-2.51 4.09ZM12.03 7.25C11.88 5.02 13.69 3.18 15.77 3c.29 2.58-2.33 4.5-3.74 4.25Z"/></svg>Apple</button>
+</div>
+<div class="auth-switch">Already a member? <button type="button" onclick="showLogin()">Sign in</button></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="container footer-grid">
+<div><a class="brand" href="#" onclick="go('home1');return false" aria-label="SeedCircle Home"><span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 27V12M16 16C11 10 6 12 5 13c1 6 4 9 11 8M16 20c4-6 9-7 11-6-1 6-4 9-11 9" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="9" r="2.2" fill="currentColor"/></svg></span><span><span class="brand-name">SeedCircle</span><span class="brand-sub">Seed & Plant Swap</span></span></a><p style="margin-top:9px">Local seed and plant swapping for gardeners who believe abundance is better shared.</p></div>
+<div><div class="footer-title">Explore</div><div class="mini-links"><a href="#" onclick="go('browse');return false">Browse Swaps</a><a href="#" onclick="go('how');return false">How It Works</a><a href="#" onclick="go('events');return false">Local Events</a><a href="#" onclick="go('service');return false">Services</a></div></div>
+<div><div class="footer-title">Members</div><div class="mini-links"><a href="#" onclick="go('dashboard');return false">Dashboard</a><a href="#" onclick="go('login');return false">Login</a><a href="#" onclick="go('contact');return false">Contact</a></div></div>
+<div><div class="footer-title">Connect</div><div class="social-icons"><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.75-2.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/></svg></a><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg></a><a href="#" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></div></div>
+</div>
+
+
+<div class="container copyright"><p>&copy; 2026 SeedCircle. All rights reserved.</p></div>
+</footer>
+<div class="toast" id="toast"></div>
+<script src="js/script.js"></script>
+
+<button id="scrollToTopBtn" aria-label="Scroll to top" title="Scroll to top">
+    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+</button>
+</body>
+
+</html>
