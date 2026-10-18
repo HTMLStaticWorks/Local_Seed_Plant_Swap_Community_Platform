@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1d4d3b">
+    <meta name="description"
+        content="About SeedCircle — Local Seed & Plant Swap Community Platform. Our story, mission, community values, and passion for local biodiversity.">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23246b4a'/%3E%3Cstop offset='100%25' stop-color='%23c58a45'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url(%23g)'/%3E%3Cpath d='M16 27V12M16 16C11 10 6 12 5 13c1 6 4 9 11 8M16 20c4-6 9-7 11-6-1 6-4 9-11 9' fill='none' stroke='%23ffffff' stroke-width='2.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='16' cy='9' r='2.2' fill='%23ffffff'/%3E%3C/svg%3E">
+    <link rel="apple-touch-icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23246b4a'/%3E%3Cstop offset='100%25' stop-color='%23c58a45'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url(%23g)'/%3E%3Cpath d='M16 27V12M16 16C11 10 6 12 5 13c1 6 4 9 11 8M16 20c4-6 9-7 11-6-1 6-4 9-11 9' fill='none' stroke='%23ffffff' stroke-width='2.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='16' cy='9' r='2.2' fill='%23ffffff'/%3E%3C/svg%3E">
+    <title>About Us — Local Seed & Plant Swap Community</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="topbar">
+        <nav class="nav container">
+            <a class="brand" href="#" onclick="go('home1');return false" aria-label="SeedCircle Home"><span
+                    class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true">
+                        <path d="M16 27V12M16 16C11 10 6 12 5 13c1 6 4 9 11 8M16 20c4-6 9-7 11-6-1 6-4 9-11 9"
+                            fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <circle cx="16" cy="9" r="2.2" fill="currentColor" />
+                    </svg></span><span><span class="brand-name">SeedCircle</span><span class="brand-sub">Seed & Plant
+                        Swap</span></span></a>
+            <div class="navlinks">
+                <button data-page="home1" onclick="go('home1')">Home</button>
+                <button data-page="home2" onclick="go('home2')">Home 2</button>
+                <button data-page="about" onclick="go('about')">About</button>
+                <button data-page="how" onclick="go('how')">How It Works</button>
+                <button data-page="browse" onclick="go('browse')">Browse Swaps</button>
+                <button data-page="service" onclick="go('service')">Services</button>
+                <button data-page="events" onclick="go('events')">Local Events</button>
+                <button data-page="contact" onclick="go('contact')">Contact</button>
+                <button data-page="dashboard" onclick="go('dashboard')">Dashboard</button>
+            </div>
+            <div class="nav-actions">
+                <button class="icon-btn" aria-label="Toggle RTL" onclick="toggleRTL()">⇄</button>
+                <button class="icon-btn" aria-label="Toggle theme" onclick="toggleTheme()">☼</button>
+                <button class="contact-btn" onclick="go('login')">Login</button>
+                <button class="icon-btn hamb" aria-label="Menu" onclick="toggleMenu()">☰</button>
+            </div>
+        </nav>
+        <div class="mobile-panel" id="mobilePanel">
+            <div class="mobile-links">
+                <button onclick="go('home1')">Home</button>
+                <button onclick="go('home2')">Home 2</button>
+                <button onclick="go('about')">About</button>
+                <button onclick="go('how')">How It Works</button>
+                <button onclick="go('browse')">Browse Swaps</button>
+                <button onclick="go('service')">Services</button>
+                <button onclick="go('events')">Local Events</button>
+                <button onclick="go('contact')">Contact</button>
+                <button onclick="go('dashboard')">Dashboard</button>
+            </div>
+            <div class="mobile-actions-row">
+                <button class="icon-btn" aria-label="Toggle RTL" onclick="toggleRTL()">⇄</button>
+                <button class="icon-btn" aria-label="Toggle theme" onclick="toggleTheme()">☼</button>
+            </div>
+            <button class="contact-btn" onclick="go('login')">Login</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="page active">
+            <!-- HERO SECTION -->
+            <div class="page-hero page-hero-about">
+                <div class="container">
+                    <div class="page-hero-content reveal">
+                        <span class="eyebrow">Rooted In Community</span>
+                        <h1>About SeedCircle</h1>
+                        <p class="lead">Connecting local gardeners, preserving heritage seeds, and nurturing resilient neighborhood ecosystems since 2021.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container section">
+
+                <!-- SECTION 1: OUR STORY -->
+                <div class="section reveal">
+                    <div class="section-head">
+                        <span class="eyebrow">How We Started</span>
+                        <h2>Our Story</h2>
+                        <p>From a handful of seed envelopes exchanged over backyard fences to a vibrant decentralized network of passionate growers.</p>
+                    </div>
+                    <div class="split">
+                        <div class="split-media">
+                            <img src="images/Keep the conversation human.png" alt="Gardeners exchanging seeds and plants">
+                        </div>
+                        <div class="copy">
+                            <span class="eyebrow">Born In Local Soil</span>
+                            <h2>Small beginnings, abundant harvests.</h2>
+                            <p>In spring 2021, three neighbors in adjoining gardens realized they each had too many heirloom tomato seed packets. Instead of letting excess seeds languish in kitchen drawers, they set up a cardboard box on the porch labeled <em>"Take what you need, leave what you can."</em></p>
+                            <p>Within three weeks, over forty local gardeners had contributed heritage seeds, rooted rosemary cuttings, and homegrown strawberry runners. It became obvious that gardeners don't just want to buy plants—they want to share the abundance of their soil and connect with people who share their passion.</p>
+                            <p>SeedCircle was built to give that grassroots tradition a permanent home: a free, friendly, neighborhood-first platform connecting seed savers, balcony growers, community allotment holders, and beginners alike.</p>
+                        </div>
+                    </div>
+                    <!-- STORY STATS STRIP -->
+                    <div class="about-stats-grid reveal">
+                        <div class="about-stat">
+                            <strong>18,500+</strong>
+                            <span>Seeds & Cuttings Swapped</span>
+                        </div>
+                        <div class="about-stat">
+                            <strong>420+</strong>
+                            <span>Heritage Varieties Preserved</span>
+                        </div>
+                        <div class="about-stat">
+                            <strong>85+</strong>
+                            <span>Neighborhood Circles</span>
+                        </div>
+                        <div class="about-stat">
+                            <strong>100%</strong>
+                            <span>Free & Member-Driven</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 2: OUR MISSION -->
+                <div class="section reveal">
+                    <div class="section-head">
+                        <span class="eyebrow">Purpose & Impact</span>
+                        <h2>Our Mission</h2>
+                        <p>Empowering every neighborhood to cultivate seed sovereignty, foster biological diversity, and celebrate shared garden abundance.</p>
+                    </div>
+                    <div class="grid-3">
+                        <article class="card">
+                            <div class="card-media">
+                                <img src="images/Seed & Plant Exchange.png" alt="Preserving heritage seeds">
+                            </div>
+                            <div class="card-body">
+                                <span class="pill">01 • Biodiversity</span>
+                                <h3>Preserve Heritage Seeds</h3>
+                                <p>Protect rare, open-pollinated, and culturally significant heirloom varieties from vanishing, keeping genetic diversity alive in community soil.</p>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <img src="images/Community Hubs.png" alt="Accessible gardening for everyone">
+                            </div>
+                            <div class="card-body">
+                                <span class="pill">02 • Accessibility</span>
+                                <h3>Make Gardening Accessible</h3>
+                                <p>Break down financial and knowledge barriers to growing food and flowers by ensuring seeds and starter plants are shared without price tags.</p>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <img src="images/Growing Guidance.png" alt="Building food resilience">
+                            </div>
+                            <div class="card-body">
+                                <span class="pill">03 • Food Resilience</span>
+                                <h3>Build Local Food Security</h3>
+                                <p>Strengthen neighborhood resilience against supply chain disruptions by establishing decentralized, community-managed seed banks.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- SECTION 3: WHY SEED & PLANT SWAPPING MATTERS -->
+                <div class="section reveal">
+                    <div class="section-head">
+                        <span class="eyebrow">The Power of Swapping</span>
+                        <h2>Why Seed & Plant Swapping Matters</h2>
+                        <p>Beyond saving money on garden center trips, seed swapping transforms urban ecology and creates deep community bonds.</p>
+                    </div>
+                    <div class="grid-4">
+                        <article class="card">
+                            <div class="card-media">
+                                <img src="https://images.pexels.com/photos/113335/pexels-photo-113335.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Green sprouts in soil">
+                            </div>
+                            <div class="card-body">
+                                <span class="pill">Climate Adaptation</span>
+                                <h3>Microclimate Resilience</h3>
+                                <p>Seeds harvested from plants thriving in your specific regional soil and weather carry natural genetic adaptations that commercial packets lack.</p>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <img src="https://images.pexels.com/photos/7728932/pexels-photo-7728932.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Hands planting seedlings">
+                            </div>
+                            <div class="card-body">
+                                <span class="pill">Zero Plastic Waste</span>
+                                <h3>Sustainable & Zero Waste</h3>
+                                <p>Swapping cuttings and seeds eliminates millions of single-use black plastic nursery pots, synthetic fertilizers, and transport emissions.</p>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <img src="https://images.pexels.com/photos/38987399/pexels-photo-38987399.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Child planting sapling">
+                            </div>
+                            <div class="card-body">
+                                <span class="pill">Heritage Conservation</span>
+                                <h3>Stopping Variety Loss</h3>
+                                <p>Over 90% of historic vegetable varieties have disappeared from commercial catalogs. Peer-to-peer swaps keep rare regional treasures thriving.</p>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <img src="images/Neighborhood Network2.png" alt="Community gardeners sharing wisdom">
+                            </div>
+                            <div class="card-body">
+                                <span class="pill">Knowledge Sharing</span>
+                                <h3>Intergenerational Wisdom</h3>
+                                <p>Experienced master gardeners share sowing timelines, companion planting strategies, and natural pest solutions directly with beginners.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- SECTION 4: HOW WE SUPPORT LOCAL GARDENING -->
+                <div class="section reveal">
+                    <div class="section-head">
+                        <span class="eyebrow">Tools & Infrastructure</span>
+                        <h2>How We Support Local Gardening</h2>
+                        <p>We build purposeful digital infrastructure designed to get people offline, into the soil, and meeting their neighbors.</p>
+                    </div>
+                    <div class="grid-4">
+                        <article class="card">
+                            <div class="card-media">
+                                <img src="images/Local connections.png" alt="Local gardener connections">
+                            </div>
+                            <div class="card-body">
+                                <span class="pill">Local Discovery</span>
+                                <h3>Hyperlocal Matching</h3>
+                                <p>Filter listings by exact garden zone, neighborhood radius, and exchange preference—from porch drop-offs to park meetups.</p>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <img src="images/Digital tools for physical gardens..PNG" alt="Digital tools for physical gardens">
+                            </div>
+                            <div class="card-body">
+                                <span class="pill">Growing Metadata</span>
+                                <h3>Detailed Variety Records</h3>
+                                <p>Every swap listing includes harvest year, sun requirements, soil preferences, and firsthand germination notes to guarantee growing success.</p>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <img src="images/Built for safety and reliability..PNG" alt="Safe and trusted exchange">
+                            </div>
+                            <div class="card-body">
+                                <span class="pill">Community Safety</span>
+                                <h3>Trusted Exchange Circles</h3>
+                                <p>Verified local gardener profiles, secure private messaging, and swap history records ensure peace of mind for every exchange.</p>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media">
+                                <img src="images/Local hubs.png" alt="Local gathering hubs">
+                            </div>
+                            <div class="card-body">
+                                <span class="pill">Event Support</span>
+                                <h3>Meetup & Workshop Toolkits</h3>
+                                <p>Comprehensive resources for organizers to host neighborhood swap circles, community garden planting days, and seed-saving classes.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- SECTION 5: COMMUNITY VALUES -->
+                <div class="section reveal">
+                    <div class="section-head">
+                        <span class="eyebrow">What We Stand For</span>
+                        <h2>Community Values</h2>
+                        <p>The principles that guide every seed envelope, cutting trade, and conversation across our platform.</p>
+                    </div>
+                    <div class="values-showcase">
+                        <!-- LEFT SIDE: Interactive Cards & Heading Text -->
+                        <div class="values-list" role="tablist" aria-label="Community Values">
+                            <div class="value-item active" onclick="selectValue(0)" onkeydown="if(event.key==='Enter'||event.key===' ')selectValue(0)" tabindex="0" role="tab" aria-selected="true">
+                                <span class="pill">Generosity</span>
+                                <h3><span>Abundance Over Scarcity</span> <span class="arrow-indicator">→</span></h3>
+                                <p>Nature produces thousands of seeds from a single flower. We believe living genetic wealth should be shared freely, never hoarded or commercialized.</p>
+                            </div>
+                            <div class="value-item" onclick="selectValue(1)" onkeydown="if(event.key==='Enter'||event.key===' ')selectValue(1)" tabindex="0" role="tab" aria-selected="false">
+                                <span class="pill">Ecology</span>
+                                <h3><span>Organic Stewardship</span> <span class="arrow-indicator">→</span></h3>
+                                <p>We champion chemical-free growing, pollinator-friendly perennials, open-pollinated seeds, and soil-first regenerative gardening practices.</p>
+                            </div>
+                            <div class="value-item" onclick="selectValue(2)" onkeydown="if(event.key==='Enter'||event.key===' ')selectValue(2)" tabindex="0" role="tab" aria-selected="false">
+                                <span class="pill">Inclusivity</span>
+                                <h3><span>Every Gardener Welcome</span> <span class="arrow-indicator">→</span></h3>
+                                <p>Whether you cultivate three acres or a single windowsill succulent, your contribution to local biodiversity is equally valued and celebrated.</p>
+                            </div>
+                            <div class="value-item" onclick="selectValue(3)" onkeydown="if(event.key==='Enter'||event.key===' ')selectValue(3)" tabindex="0" role="tab" aria-selected="false">
+                                <span class="pill">Trust</span>
+                                <h3><span>Integrity & Transparency</span> <span class="arrow-indicator">→</span></h3>
+                                <p>We encourage honest seed viability labeling, pest-free cutting inspections, and thoughtful, respectful communication between members.</p>
+                            </div>
+                        </div>
+
+                        <!-- RIGHT SIDE: Corresponding Image Preview -->
+                        <div class="values-preview" aria-live="polite">
+                            <div class="value-media-slide active" data-index="0">
+                                <img src="images/Native Pollinator Mix.png" alt="Abundance Over Scarcity - Wildflower Garden">
+                                <div class="value-slide-badge">
+                                    <strong>Abundance Over Scarcity</strong>
+                                    <span class="pill">Generosity</span>
+                                </div>
+                            </div>
+                            <div class="value-media-slide" data-index="1">
+                                <img src="images/Lavender Cuttings.png" alt="Organic Stewardship - Rosemary and Plant Cuttings">
+                                <div class="value-slide-badge">
+                                    <strong>Organic Stewardship</strong>
+                                    <span class="pill">Ecology</span>
+                                </div>
+                            </div>
+                            <div class="value-media-slide" data-index="2">
+                                <img src="images/Mint Cuttings.png" alt="Every Gardener Welcome - Rooted Plant Cuttings in Water">
+                                <div class="value-slide-badge">
+                                    <strong>Every Gardener Welcome</strong>
+                                    <span class="pill">Inclusivity</span>
+                                </div>
+                            </div>
+                            <div class="value-media-slide" data-index="3">
+                                <img src="images/Thai Basil Starter.png" alt="Integrity & Transparency - Seedlings in Garden Bed">
+                                <div class="value-slide-badge">
+                                    <strong>Integrity & Transparency</strong>
+                                    <span class="pill">Trust</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 6: MEET THE COMMUNITY -->
+                <div class="section reveal">
+                    <div class="section-head">
+                        <span class="eyebrow">Faces of the Circle</span>
+                        <h2>Meet the Community</h2>
+                        <p>Get to know some of the passionate growers, seed savers, and neighborhood coordinators who make our community flourish.</p>
+                    </div>
+                    <div class="grid-4">
+                        <article class="card member-card">
+                            <div class="member-avatar">
+                                <img src="images/elena_rostova.jpg" alt="Elena Rostova - Heritage Seed Saver">
+                            </div>
+                            <div class="card-body">
+                                <span class="pill">Zone 6b • Heirloom Seeds</span>
+                                <h3>Elena Rostova</h3>
+                                <span class="member-role">Heritage Seed Saver</span>
+                                <p class="member-quote">"I’ve preserved 24 varieties of cold-hardy Ukrainian tomatoes passed down through four generations. Swapping ensures these varieties survive."</p>
+                            </div>
+                        </article>
+                        <article class="card member-card">
+                            <div class="member-avatar">
+                                <img src="images/marcus_chen.jpg" alt="Marcus Chen - Container Gardening Lead">
+                            </div>
+                            <div class="card-body">
+                                <span class="pill">Zone 8a • Urban Balcony</span>
+                                <h3>Marcus Chen</h3>
+                                <span class="member-role">Container Gardening Lead</span>
+                                <p class="member-quote">"I started with two small mint cuttings on my fire escape. Today, four floors in my apartment share a vertical strawberry and herb garden."</p>
+                            </div>
+                        </article>
+                        <article class="card member-card">
+                            <div class="member-avatar">
+                                <img src="images/sarah_jamal.jpg" alt="Sarah and Jamal Miller - Eastside Swap Organizers">
+                            </div>
+                            <div class="card-body">
+                                <span class="pill">Zone 7b • Community Events</span>
+                                <h3>Sarah & Jamal Miller</h3>
+                                <span class="member-role">Eastside Swap Organizers</span>
+                                <p class="member-quote">"Hosting our monthly park swap brought out over 150 neighbors who had never spoken before. Plants are the most natural icebreaker."</p>
+                            </div>
+                        </article>
+                        <article class="card member-card">
+                            <div class="member-avatar">
+                                <img src="images/amara_diallo.jpg" alt="Amara Diallo - Botanical Educator">
+                            </div>
+                            <div class="card-body">
+                                <span class="pill">Zone 9a • Native Pollinators</span>
+                                <h3>Amara Diallo</h3>
+                                <span class="member-role">Botanical Educator</span>
+                                <p class="member-quote">"Sharing native milkweed and pollinator wildflower seeds has noticeably brought back monarch butterflies and solitary bees to our city."</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- SECTION 7: FINAL CTA -->
+                <div class="section reveal">
+                    <div class="emoji-card" style="padding: 48px 24px;">
+                        <div>
+                            <span class="eyebrow" style="color:var(--primary);margin-bottom:12px;">Grow With Us</span>
+                            <h2>Ready to grow together?</h2>
+                            <p style="color:var(--muted);max-width:620px;margin:10px auto 24px">Join thousands of local growers sharing seeds, saving rare varieties, and building greener neighborhoods today.</p>
+                            <button class="primary-btn" onclick="go('login')">Join Our Community</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div><a class="brand" href="#" onclick="go('home1');return false" aria-label="SeedCircle Home"><span
+                        class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true">
+                            <path d="M16 27V12M16 16C11 10 6 12 5 13c1 6 4 9 11 8M16 20c4-6 9-7 11-6-1 6-4 9-11 9"
+                                fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="16" cy="9" r="2.2" fill="currentColor" />
+                        </svg></span><span><span class="brand-name">SeedCircle</span><span class="brand-sub">Seed &
+                            Plant Swap</span></span></a>
+                <p style="margin-top:9px">Local seed and plant swapping for gardeners who believe abundance is better shared.</p>
+            </div>
+            <div>
+                <div class="footer-title">Explore</div>
+                <div class="mini-links">
+                    <a href="#" onclick="go('home1');return false">Home 1</a>
+                    <a href="#" onclick="go('home2');return false">Home 2</a>
+                    <a href="#" onclick="go('about');return false">About</a>
+                    <a href="#" onclick="go('browse');return false">Browse Swaps</a>
+                    <a href="#" onclick="go('how');return false">How It Works</a>
+                    <a href="#" onclick="go('events');return false">Local Events</a>
+                    <a href="#" onclick="go('service');return false">Services</a>
+                </div>
+            </div>
+            <div>
+                <div class="footer-title">Members</div>
+                <div class="mini-links">
+                    <a href="#" onclick="go('dashboard');return false">Dashboard</a>
+                    <a href="#" onclick="go('login');return false">Login</a>
+                    <a href="#" onclick="go('contact');return false">Contact</a>
+                </div>
+            </div>
+            <div>
+                <div class="footer-title">Connect</div>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.75-2.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z" /></svg></a>
+                    <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" /></svg></a>
+                    <a href="#" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container copyright">
+            <p>&copy; 2026 SeedCircle. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast"></div>
+    <script src="js/script.js"></script>
+
+    <button id="scrollToTopBtn" aria-label="Scroll to top" title="Scroll to top">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5" fill="none"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+</body>
+
+</html>

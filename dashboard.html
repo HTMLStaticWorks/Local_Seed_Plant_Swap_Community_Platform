@@ -7,7 +7,7 @@
 <meta name="description" content="160 — Local Seed & Plant Swap Community Platform. Discover, swap and grow with nearby gardeners.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23246b4a'/%3E%3Cstop offset='100%25' stop-color='%23c58a45'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url(%23g)'/%3E%3Cpath d='M16 27V12M16 16C11 10 6 12 5 13c1 6 4 9 11 8M16 20c4-6 9-7 11-6-1 6-4 9-11 9' fill='none' stroke='%23ffffff' stroke-width='2.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='16' cy='9' r='2.2' fill='%23ffffff'/%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23246b4a'/%3E%3Cstop offset='100%25' stop-color='%23c58a45'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url(%23g)'/%3E%3Cpath d='M16 27V12M16 16C11 10 6 12 5 13c1 6 4 9 11 8M16 20c4-6 9-7 11-6-1 6-4 9-11 9' fill='none' stroke='%23ffffff' stroke-width='2.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='16' cy='9' r='2.2' fill='%23ffffff'/%3E%3C/svg%3E">
-<title>160 — Local Seed & Plant Swap Community</title>
+<title>Local Seed & Plant Swap Community</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="dashboard-mode">
@@ -18,7 +18,7 @@
     <aside class="app-sidebar">
         <div class="app-brand">
             <a class="brand" href="#" onclick="go('home1');return false" style="color: white; text-decoration: none; display: flex; align-items: center; gap: 8px;">
-                <span class="brand-mark" style="color: #4CAF50;"><svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path d="M16 27V12M16 16C11 10 6 12 5 13c1 6 4 9 11 8M16 20c4-6 9-7 11-6-1 6-4 9-11 9" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="9" r="2.2" fill="currentColor"/></svg></span>
+                <span class="brand-mark" style="color: var(--primary);"><svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path d="M16 27V12M16 16C11 10 6 12 5 13c1 6 4 9 11 8M16 20c4-6 9-7 11-6-1 6-4 9-11 9" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="9" r="2.2" fill="currentColor"/></svg></span>
                 <span style="font-size: 1.25rem; font-weight: 800; tracking: -0.5px;">SeedCircle</span>
             </a>
         </div>
@@ -28,12 +28,19 @@
             <button onclick="dashTab(this, 'requests')"><span>📫</span> Requests</button>
             <button onclick="dashTab(this, 'messages')"><span>💬</span> Messages</button>
             <button onclick="dashTab(this, 'history')"><span>🔄</span> Swap History</button>
-            <button onclick="dashTab(this, 'profile')"><span>👤</span> Profile</button>
+            <button onclick="dashTab(this, 'profile')"><span>⚙️</span> Settings & Profile</button>
         </nav>
         <div class="app-bottom-section" style="margin-top: auto; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; display: flex; flex-direction: column; gap: 12px;">
             <div class="app-bottom-row" style="margin-top: 0; padding-top: 0; border-top: none;">
                 <button onclick="toggleTheme()" aria-label="Toggle Theme">☼</button>
                 <button onclick="toggleRTL()" aria-label="Toggle RTL">⇄</button>
+            </div>
+            <div class="sidebar-user-profile">
+                <span class="user-initial">AM</span>
+                <div class="user-info">
+                    <strong>Asha M.</strong>
+                    <small>Zone 8 Gardener</small>
+                </div>
             </div>
             <button onclick="go('home1')" aria-label="Log Out" style="width: 100%; text-align: center; border: 0; background: rgba(255,255,255,0.05); color: white; padding: 11px; border-radius: 12px; font-weight: 800; cursor: pointer; transition: 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'">Log Out</button>
         </div>
@@ -221,45 +228,301 @@
 </div>
     
 <div id="pane-profile" class="tab-pane">
-<div class="grid-4" style="margin-top: 24px;">
-<article class="card">
-    <div class="card-media" style="background: #f1f5f9; display: flex; align-items: center; justify-content: center; height: 160px;">
-        <svg viewBox="0 0 24 24" style="width: 48px; height: 48px; stroke: var(--primary);" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-        </svg>
+
+    <!-- Profile Overview Banner -->
+    <div class="profile-banner-card">
+        <div class="profile-banner-left">
+            <div class="profile-avatar-wrap">
+                <span id="profAvatarInitials">AM</span>
+                <span class="profile-avatar-status" title="Active Community Member"></span>
+            </div>
+            <div class="profile-banner-meta">
+                <h2 id="profBannerName">Asha M.</h2>
+                <p id="profBannerSubtitle"><span id="profBannerHandle">@asha_gardens</span> • <span id="profBannerZone">Zone 8b Gardener</span> • East Central Community Hub</p>
+                <div class="profile-banner-badges">
+                    <span class="pill" style="background: rgba(36, 107, 74, 0.15); color: var(--primary);">✓ Verified Swapper</span>
+                    <span class="pill" style="background: rgba(197, 138, 69, 0.15); color: var(--accent);">⭐ 4.9 Rating (28 Swaps)</span>
+                    <span class="pill" style="background: rgba(100, 116, 139, 0.15); color: var(--muted);">🌱 Seed Guardian</span>
+                </div>
+            </div>
+        </div>
+        <div class="profile-banner-actions">
+            <input type="file" id="avatarFileInput" accept="image/*" style="display: none;" onchange="handleAvatarUpload(this)">
+            <button type="button" class="primary-btn" style="padding: 9px 18px; font-size: 0.88rem;" onclick="document.getElementById('avatarFileInput').click()">Change Photo</button>
+            <button type="button" class="ghost-btn" style="padding: 9px 16px; font-size: 0.88rem;" onclick="removeAvatar()">Remove</button>
+        </div>
     </div>
-    <div class="card-body"><h3>Security Settings</h3><p>Update your password and enable two-factor authentication.</p></div>
-</article>
-<article class="card">
-    <div class="card-media" style="background: #f1f5f9; display: flex; align-items: center; justify-content: center; height: 160px;">
-        <svg viewBox="0 0 24 24" style="width: 48px; height: 48px; stroke: var(--primary);" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-        </svg>
+
+    <!-- Main Settings Form & Options -->
+    <form id="profileEditForm" onsubmit="saveProfileChanges(event)">
+        <div class="settings-grid-layout">
+
+            <!-- Card 1: Personal & Account Details -->
+            <div class="settings-card">
+                <div class="settings-card-head">
+                    <div class="settings-card-icon">👤</div>
+                    <div class="settings-card-head-text">
+                        <h3>Personal Information</h3>
+                        <p>Manage your basic account identity and contact details visible to other swappers.</p>
+                    </div>
+                </div>
+                <div class="settings-fields">
+                    <div class="settings-row">
+                        <div class="settings-field-item">
+                            <label for="profFullName">Full Name</label>
+                            <input class="field" id="profFullName" name="fullName" value="Asha M." required>
+                        </div>
+                        <div class="settings-field-item">
+                            <label for="profHandle">Public Handle <small>Unique</small></label>
+                            <input class="field" id="profHandle" name="handle" value="@asha_gardens" required>
+                        </div>
+                    </div>
+                    <div class="settings-row">
+                        <div class="settings-field-item">
+                            <label for="profEmail">Email Address <small style="color:var(--primary); font-weight:700;">✓ Verified</small></label>
+                            <input class="field" id="profEmail" name="email" type="email" value="asha.gardens@seedcircle.org" required>
+                        </div>
+                        <div class="settings-field-item">
+                            <label for="profPhone">Phone Number <small>Private</small></label>
+                            <input class="field" id="profPhone" name="phone" type="tel" value="+1 (555) 234-8901">
+                        </div>
+                    </div>
+                    <div class="settings-field-item">
+                        <label for="profBio">Gardener Bio & Story <small>Max 300 chars</small></label>
+                        <textarea class="field" id="profBio" name="bio" rows="3" style="min-height: 85px;">Passionate organic grower focusing on heirloom tomatoes, drought-tolerant herbs, and pollinator-friendly native perennials. Active in local zone 8 seed swaps since 2022.</textarea>
+                    </div>
+                    <div class="settings-field-item">
+                        <label for="profWebsite">Garden Journal / Social Link</label>
+                        <input class="field" id="profWebsite" name="website" type="url" value="https://instagram.com/asha_urbanplot" placeholder="https://">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Gardening & Regional Swap Profile -->
+            <div class="settings-card">
+                <div class="settings-card-head">
+                    <div class="settings-card-icon">🌱</div>
+                    <div class="settings-card-head-text">
+                        <h3>Gardening & Swap Profile</h3>
+                        <p>Help local members find seeds and plant starts best suited to your microclimate and space.</p>
+                    </div>
+                </div>
+                <div class="settings-fields">
+                    <div class="settings-row">
+                        <div class="settings-field-item">
+                            <label for="profZone">Hardiness Zone</label>
+                            <select class="field" id="profZone" name="zone">
+                                <option value="Zone 8b Gardener" selected>Zone 8b (Pacific Northwest / Maritime)</option>
+                                <option value="Zone 8a Gardener">Zone 8a (Moderate Temperate)</option>
+                                <option value="Zone 7b Gardener">Zone 7b (Mid-Atlantic / Inland)</option>
+                                <option value="Zone 7a Gardener">Zone 7a (Appalachian / Plateau)</option>
+                                <option value="Zone 9a Gardener">Zone 9a (Coastal Mild)</option>
+                                <option value="Zone 9b Gardener">Zone 9b (Subtropical Warm)</option>
+                                <option value="Zone 6a/6b Gardener">Zone 6 (Cold Winter / Four Seasons)</option>
+                                <option value="Zone 5 Gardener">Zone 5 or colder (Northern Hardy)</option>
+                                <option value="Zone 10+ Gardener">Zone 10+ (Tropical / Arid)</option>
+                            </select>
+                        </div>
+                        <div class="settings-field-item">
+                            <label for="profGardenType">Primary Growing Space</label>
+                            <select class="field" id="profGardenType" name="gardenType">
+                                <option selected>Urban Backyard Plot & Raised Beds</option>
+                                <option>Community Garden Allotment</option>
+                                <option>Balcony Container Garden</option>
+                                <option>Suburban Food Forest & Orchard</option>
+                                <option>Indoor Greenhouse & Seedling Trays</option>
+                                <option>Rooftop Terrace Garden</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="settings-field-item">
+                        <label for="profHub">Default Exchange Location / Hub</label>
+                        <input class="field" id="profHub" name="hub" value="East Central Community Garden, Main Gate" placeholder="Neighborhood or public pickup spot">
+                    </div>
+                    <div class="settings-field-item">
+                        <label for="profSwapMode">Preferred Exchange Method</label>
+                        <select class="field" id="profSwapMode" name="swapMode">
+                            <option selected>In-Person Meetup (Public spots / Community gardens)</option>
+                            <option>Porch Drop-off / Contactless Pickup</option>
+                            <option>Postal Mail (Bubble mailer / seed envelope)</option>
+                            <option>All Exchange Methods Welcome</option>
+                        </select>
+                    </div>
+                    <div class="settings-field-item">
+                        <label>Active Swap Specialties <small>Click to toggle</small></label>
+                        <div class="interest-chips">
+                            <button type="button" class="interest-chip active" onclick="toggleInterestChip(this)">🍅 Heirloom Veggies</button>
+                            <button type="button" class="interest-chip active" onclick="toggleInterestChip(this)">🌿 Perennial Herbs</button>
+                            <button type="button" class="interest-chip active" onclick="toggleInterestChip(this)">🐝 Native Pollinators</button>
+                            <button type="button" class="interest-chip active" onclick="toggleInterestChip(this)">✂️ Rooted Cuttings</button>
+                            <button type="button" class="interest-chip" onclick="toggleInterestChip(this)">🌸 Annual Flowers</button>
+                            <button type="button" class="interest-chip" onclick="toggleInterestChip(this)">🪴 Houseplants</button>
+                            <button type="button" class="interest-chip" onclick="toggleInterestChip(this)">🥔 Seed Potatoes & Tubers</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Privacy & Visibility Controls -->
+            <div class="settings-card">
+                <div class="settings-card-head">
+                    <div class="settings-card-icon">🔒</div>
+                    <div class="settings-card-head-text">
+                        <h3>Privacy & Visibility Controls</h3>
+                        <p>Control who can discover your profile and send swap inquiries.</p>
+                    </div>
+                </div>
+                <div class="settings-fields">
+                    <div class="settings-field-item">
+                        <label for="profPrivacy">Swap Request Permissions</label>
+                        <select class="field" id="profPrivacy" name="privacy">
+                            <option selected>All Registered Community Members</option>
+                            <option>Verified Gardeners Only (Badge confirmed)</option>
+                            <option>Members within 15 miles radius only</option>
+                        </select>
+                    </div>
+                    <div class="toggle-setting-row">
+                        <div class="toggle-setting-info">
+                            <strong>Public Inventory Visibility</strong>
+                            <p>Display your active seed and cutting inventory in the public Browse Swaps directory.</p>
+                        </div>
+                        <input type="checkbox" id="prefShowInventory" checked>
+                    </div>
+                    <div class="toggle-setting-row">
+                        <div class="toggle-setting-info">
+                            <strong>Show Neighborhood on Map</strong>
+                            <p>Show an approximate 1-mile radius area on community map (your exact address is never shared).</p>
+                        </div>
+                        <input type="checkbox" id="prefShowMap" checked>
+                    </div>
+                    <div class="toggle-setting-row">
+                        <div class="toggle-setting-info">
+                            <strong>Show Swap History & Reviews</strong>
+                            <p>Allow members to see feedback from completed seed trades to establish trading trust.</p>
+                        </div>
+                        <input type="checkbox" id="prefShowHistory" checked>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Notification Preferences & Alerts -->
+            <div class="settings-card">
+                <div class="settings-card-head">
+                    <div class="settings-card-icon">🔔</div>
+                    <div class="settings-card-head-text">
+                        <h3>Notification Preferences</h3>
+                        <p>Choose when and how SeedCircle alerts you about swaps and local events.</p>
+                    </div>
+                </div>
+                <div class="settings-fields">
+                    <div class="toggle-setting-row">
+                        <div class="toggle-setting-info">
+                            <strong>Swap Request Alerts</strong>
+                            <p>Receive instant notifications when someone requests one of your listed seeds or plants.</p>
+                        </div>
+                        <input type="checkbox" id="notifRequests" checked>
+                    </div>
+                    <div class="toggle-setting-row">
+                        <div class="toggle-setting-info">
+                            <strong>Chat & Message Notifications</strong>
+                            <p>Get notified when a trade partner sends a message or arranges pickup logistics.</p>
+                        </div>
+                        <input type="checkbox" id="notifMessages" checked>
+                    </div>
+                    <div class="toggle-setting-row">
+                        <div class="toggle-setting-info">
+                            <strong>Local Seed Swap Events</strong>
+                            <p>Alerts about in-person seed swaps, seed libraries, and gardening workshops near you.</p>
+                        </div>
+                        <input type="checkbox" id="notifEvents" checked>
+                    </div>
+                    <div class="toggle-setting-row">
+                        <div class="toggle-setting-info">
+                            <strong>Seasonal Planting Calendar Reminders</strong>
+                            <p>Monthly reminders for when to start seeds indoors and transplant in Zone 8.</p>
+                        </div>
+                        <input type="checkbox" id="notifCalendar" checked>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Sticky / Clear Action Bar -->
+        <div class="settings-actions-footer">
+            <div class="settings-sync-note">
+                <span>Changes will be applied immediately to your dashboard profile</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <button type="button" class="discard-btn" onclick="resetProfileChanges()">Reset Form</button>
+                <button type="submit" class="save-btn">
+                    <span>💾</span> Save Profile Changes
+                </button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Additional Account & Security Cards (Retained & Enhanced) -->
+    <div style="margin-bottom: 14px;">
+        <h3 style="font-size: 1.15rem; color: var(--ink); font-weight: 800;">Account Management & Security Controls</h3>
+        <p style="color: var(--muted); font-size: 0.88rem;">Advanced security credentials and account status.</p>
     </div>
-    <div class="card-body"><h3>Notification Preferences</h3><p>Control which emails and push alerts you receive.</p></div>
-</article>
-<article class="card">
-    <div class="card-media" style="background: #f1f5f9; display: flex; align-items: center; justify-content: center; height: 160px;">
-        <svg viewBox="0 0 24 24" style="width: 48px; height: 48px; stroke: var(--primary);" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-        </svg>
+
+    <div class="grid-4" style="margin-top: 14px;">
+        <article class="card">
+            <div class="card-media" style="background: #f1f5f9; display: flex; align-items: center; justify-content: center; height: 140px;">
+                <svg viewBox="0 0 24 24" style="width: 44px; height: 44px; stroke: var(--primary);" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+            </div>
+            <div class="card-body">
+                <h3>Password & 2FA</h3>
+                <p>Change your password or reconfigure your 2-factor authenticator app.</p>
+                <button class="ghost-btn" style="margin-top: 10px; width: 100%; font-size: 0.82rem; padding: 7px 10px;" onclick="toast('Password update dialog opened')">Update Password</button>
+            </div>
+        </article>
+        <article class="card">
+            <div class="card-media" style="background: #f1f5f9; display: flex; align-items: center; justify-content: center; height: 140px;">
+                <svg viewBox="0 0 24 24" style="width: 44px; height: 44px; stroke: var(--primary);" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                </svg>
+            </div>
+            <div class="card-body">
+                <h3>Push Alerts</h3>
+                <p>Configure desktop browser and mobile push delivery permissions.</p>
+                <button class="ghost-btn" style="margin-top: 10px; width: 100%; font-size: 0.82rem; padding: 7px 10px;" onclick="toast('Push notification preferences saved')">Configure Alerts</button>
+            </div>
+        </article>
+        <article class="card">
+            <div class="card-media" style="background: #f1f5f9; display: flex; align-items: center; justify-content: center; height: 140px;">
+                <svg viewBox="0 0 24 24" style="width: 44px; height: 44px; stroke: var(--primary);" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+            </div>
+            <div class="card-body">
+                <h3>Data Export</h3>
+                <p>Download a copy of your seed listings, trade logs, and contact history.</p>
+                <button class="ghost-btn" style="margin-top: 10px; width: 100%; font-size: 0.82rem; padding: 7px 10px;" onclick="toast('Account data archive generated (.json)')">Export My Data</button>
+            </div>
+        </article>
+        <article class="card">
+            <div class="card-media" style="background: #f1f5f9; display: flex; align-items: center; justify-content: center; height: 140px;">
+                <svg viewBox="0 0 24 24" style="width: 44px; height: 44px; stroke: #ef4444;" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="3 6 5 6 21 6"></polyline>
+                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                    <line x1="10" y1="11" x2="10" y2="17"></line>
+                    <line x1="14" y1="11" x2="14" y2="17"></line>
+                </svg>
+            </div>
+            <div class="card-body">
+                <h3>Delete Account</h3>
+                <p>Permanently remove your account and all listed seeds from SeedCircle.</p>
+                <button class="ghost-btn" style="margin-top: 10px; width: 100%; font-size: 0.82rem; padding: 7px 10px; color:#ef4444; border-color:#fca5a5;" onclick="if(confirm('Are you sure you want to deactivate your SeedCircle account? This action cannot be undone.')){ toast('Account deactivation requested'); }">Deactivate Account</button>
+            </div>
+        </article>
     </div>
-    <div class="card-body"><h3>Privacy Controls</h3><p>Manage who can see your listings and message you.</p></div>
-</article>
-<article class="card">
-    <div class="card-media" style="background: #f1f5f9; display: flex; align-items: center; justify-content: center; height: 160px;">
-        <svg viewBox="0 0 24 24" style="width: 48px; height: 48px; stroke: #ef4444;" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="3 6 5 6 21 6"></polyline>
-            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-            <line x1="10" y1="11" x2="10" y2="17"></line>
-            <line x1="14" y1="11" x2="14" y2="17"></line>
-        </svg>
-    </div>
-    <div class="card-body"><h3>Delete Account</h3><p>Permanently remove your data from SeedCircle.</p></div>
-</article>
-</div>
 
 </div>
     
