@@ -1953,8 +1953,45 @@ body.dashboard-mode #scrollToTopBtn {
 }
 
 .app-brand {
-  margin-bottom: 40px;
-  padding-left: 10px;
+  margin-bottom: 32px;
+  padding-left: 4px;
+}
+
+.app-brand .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface);
+  padding: 8px 14px;
+  border-radius: 16px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app-brand .brand:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.app-brand .brand-name {
+  color: var(--ink);
+  font-weight: 950;
+  display: block;
+  line-height: 1;
+}
+
+.app-brand .brand:hover .brand-name {
+  color: var(--primary);
+}
+
+.app-brand .brand-sub {
+  color: var(--muted);
+  display: block;
+  font-size: .68rem;
+  font-weight: 700;
+  margin-top: 3px;
+  letter-spacing: .01em;
 }
 
 .app-nav {
