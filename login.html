@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#1d4d3b">
-<meta name="description" content="160 — Local Seed & Plant Swap Community Platform. Discover, swap and grow with nearby gardeners.">
+<meta name="description" content="Local Seed & Plant Swap Community Platform. Discover, swap and grow with nearby gardeners.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23246b4a'/%3E%3Cstop offset='100%25' stop-color='%23c58a45'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url(%23g)'/%3E%3Cpath d='M16 27V12M16 16C11 10 6 12 5 13c1 6 4 9 11 8M16 20c4-6 9-7 11-6-1 6-4 9-11 9' fill='none' stroke='%23ffffff' stroke-width='2.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='16' cy='9' r='2.2' fill='%23ffffff'/%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23246b4a'/%3E%3Cstop offset='100%25' stop-color='%23c58a45'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url(%23g)'/%3E%3Cpath d='M16 27V12M16 16C11 10 6 12 5 13c1 6 4 9 11 8M16 20c4-6 9-7 11-6-1 6-4 9-11 9' fill='none' stroke='%23ffffff' stroke-width='2.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='16' cy='9' r='2.2' fill='%23ffffff'/%3E%3C/svg%3E">
-<title>160 — Local Seed & Plant Swap Community</title>
+<title>Login — Local Seed & Plant Swap Community</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="auth-mode">
@@ -70,7 +70,15 @@
 
 <div class="form-grid">
 <div class="form-group full"><label>Email</label><input class="field" type="email" placeholder="you@example.com"></div>
-<div class="form-group full"><label>Password</label><input class="field" type="password" placeholder="••••••••"></div>
+<div class="form-group full">
+    <label>Password</label>
+    <div class="password-field-wrap">
+        <input class="field" type="password" id="signinPassword" placeholder="••••••••">
+        <button type="button" class="password-toggle-btn" onclick="togglePasswordVisibility('signinPassword', this)" aria-label="Toggle password visibility">
+            <svg class="eye-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+        </button>
+    </div>
+</div>
 </div>
 <div class="auth-options"><label class="remember"><input type="checkbox"> Remember me</label><button class="forgot-link" type="button" onclick="toast('Password reset link preview')">Forgot password?</button></div>
 <button class="primary-btn" style="width:100%;margin-top:17px" onclick="go('dashboard')">Sign In</button>
@@ -92,7 +100,15 @@
 <div class="form-group full"><label>First name</label><input class="field" placeholder="First name"></div>
 <div class="form-group full"><label>Last name</label><input class="field" placeholder="Last name"></div>
 <div class="form-group full"><label>Email</label><input class="field" type="email" placeholder="you@example.com"></div>
-<div class="form-group full"><label>Password</label><input class="field" type="password" placeholder="Create a password"></div>
+<div class="form-group full">
+    <label>Password</label>
+    <div class="password-field-wrap">
+        <input class="field" type="password" id="registerPassword" placeholder="Create a password">
+        <button type="button" class="password-toggle-btn" onclick="togglePasswordVisibility('registerPassword', this)" aria-label="Toggle password visibility">
+            <svg class="eye-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+        </button>
+    </div>
+</div>
 </div>
 <label class="terms"><input type="checkbox" required><span>I agree to the <a href="#" onclick="toast('Terms & Conditions preview');return false" style="color:var(--primary);font-weight:900">Terms & Conditions</a> and <a href="#" onclick="toast('Privacy Policy preview');return false" style="color:var(--primary);font-weight:900">Privacy Policy</a>.</span></label>
 <button class="primary-btn" style="width:100%;margin-top:15px" onclick="toast('Account created — demo confirmation');showLogin()">Create Account</button>

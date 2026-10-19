@@ -27,7 +27,7 @@ const newLayout = `
         <div class="app-brand">
             <a class="brand" href="#" onclick="go('home1');return false" style="color: white; text-decoration: none; display: flex; align-items: center; gap: 8px;">
                 <span class="brand-mark" style="color: #4CAF50;"><svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path d="M16 27V12M16 16C11 10 6 12 5 13c1 6 4 9 11 8M16 20c4-6 9-7 11-6-1 6-4 9-11 9" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="9" r="2.2" fill="currentColor"/></svg></span>
-                <span style="font-size: 1.25rem; font-weight: 800; tracking: -0.5px;">SeedCircle</span>
+                <span style="font-size: 1.25rem; font-weight: 800; letter-spacing: -0.5px;">SeedCircle</span>
             </a>
         </div>
         <nav class="app-nav">
